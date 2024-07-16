@@ -12,10 +12,10 @@ $colors: (
 );
 
 @each $key, $value in $colors {
-	.color-#{$key} {
+	.text-#{$key} {
 		color: $value;
 	}
-	.background-#{$key} {
+	.bg-#{$key} {
 		background-color: $value;
 	}
 }
