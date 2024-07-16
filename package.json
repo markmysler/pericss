@@ -1,6 +1,6 @@
 {
 	"name": "pericss",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "La primera libreria de estilos de peripeteia",
 	"style": "dist/index.css",
 	"files": [
