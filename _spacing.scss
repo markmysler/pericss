@@ -1,0 +1,40 @@
+// _spacing.scss
+
+$spacing: (
+	"xs": 0.25rem,
+	"sm": 0.5rem,
+	"md": 1rem,
+	"lg": 2rem,
+	"xl": 4rem,
+);
+
+@mixin generate-spacing-classes($prefix, $property) {
+	@each $key, $value in $spacing {
+		.#{$prefix}-#{$key} {
+			#{$property}: $value;
+		}
+		.#{$prefix}t-#{$key} {
+			#{$property}-top: $value;
+		}
+		.#{$prefix}b-#{$key} {
+			#{$property}-bottom: $value;
+		}
+		.#{$prefix}l-#{$key} {
+			#{$property}-left: $value;
+		}
+		.#{$prefix}r-#{$key} {
+			#{$property}-right: $value;
+		}
+		.#{$prefix}x-#{$key} {
+			#{$property}-left: $value;
+			#{$property}-right: $value;
+		}
+		.#{$prefix}y-#{$key} {
+			#{$property}-top: $value;
+			#{$property}-bottom: $value;
+		}
+	}
+}
+
+@include generate-spacing-classes("m", "margin");
+@include generate-spacing-classes("p", "padding");
