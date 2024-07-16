@@ -1,8 +1,11 @@
 {
 	"name": "pericss",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "La primera libreria de estilos de peripeteia",
-	"main": "index.scss",
+	"style": "dist/index.css",
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "sass index.scss dist/index.css --style=compressed"
