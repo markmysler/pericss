@@ -1,0 +1,11 @@
+@import "sizes";
+
+//max-height
+
+$max-h-options: map-remove($sizes, "auto");
+
+@each $key, $value in $max-h-options {
+	.max-h-#{$key} {
+		max-height: $value;
+	}
+}

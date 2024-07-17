@@ -1,0 +1,18 @@
+@import "../color";
+
+//background color
+
+@each $key, $value in $colors {
+	.bg-#{$key} {
+		background-color: $value;
+	}
+	.bg-#{$key}-75 {
+		background-color: rgba($value, 0.75);
+	}
+	.bg-#{$key}-50 {
+		background-color: rgba($value, 0.5);
+	}
+	.bg-#{$key}-25 {
+		background-color: rgba($value, 0.25);
+	}
+}

@@ -1,0 +1,13 @@
+// text transform
+
+$text-transform-options: (
+	"lowercase": lowercase,
+	"uppercase": uppercase,
+	"capitalize": capitalize,
+);
+
+@each$key,$value in $text-transform-options {
+	.#{$key} {
+		text-transform: $value;
+	}
+}

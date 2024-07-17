@@ -1,0 +1,15 @@
+$display-options: (
+	"flex": flex,
+	"grid": grid,
+	"block": block,
+	"inline": inline,
+	"inline-block": inline-block,
+	"inline-flex": inline-flex,
+	"hidden": hidden,
+);
+
+@each $key, $value in $display-options {
+	.#{$key} {
+		display: $value;
+	}
+}

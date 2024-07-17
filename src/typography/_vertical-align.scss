@@ -1,0 +1,18 @@
+// vertical align
+
+$vertical-align-options: (
+	"baseline": baseline,
+	"top": top,
+	"middle": middle,
+	"bottom": bottom,
+	"text-top": text-top,
+	"text-bottom": text-bottom,
+	"sub": sub,
+	"super": super,
+);
+
+@each$key,$value in $vertical-align-options {
+	.vertical-align-#{$key} {
+		vertical-align: $value;
+	}
+}

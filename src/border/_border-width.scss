@@ -1,0 +1,35 @@
+//border width
+
+$border-sizes: (
+	"0": 0px,
+	"1": 1px,
+	"2": 2px,
+	"3": 3px,
+	"4": 4px,
+);
+
+@each $key, $value in $border-sizes {
+	.border-#{$key} {
+		border-width: $value;
+	}
+	.border-x-#{$key} {
+		border-right-width: $value;
+		border-left-width: $value;
+	}
+	.border-y-#{$key} {
+		border-top-width: $value;
+		border-bottom-width: $value;
+	}
+	.border-top-#{$key} {
+		border-top-width: $value;
+	}
+	.border-bottom-#{$key} {
+		border-bottom-width: $value;
+	}
+	.border-left-#{$key} {
+		border-left-width: $value;
+	}
+	.border-right-#{$key} {
+		border-right-width: $value;
+	}
+}

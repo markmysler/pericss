@@ -1,0 +1,15 @@
+@import "spacing-options";
+
+// gap
+
+@each $key, $value in $spacing {
+	.gap-#{$key} {
+		gap: $value;
+	}
+	.gap-row-#{$key} {
+		gap: $value 0;
+	}
+	.gap-col-#{$key} {
+		gap: 0 $value;
+	}
+}

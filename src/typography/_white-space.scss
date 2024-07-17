@@ -1,0 +1,12 @@
+// white space
+
+$white-space-options: (
+	"normal": normal,
+	"nowrap": nowrap,
+);
+
+@each $key, $value in $white-space-options {
+	.white-space-#{$key} {
+		white-space: $value;
+	}
+}

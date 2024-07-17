@@ -1,0 +1,18 @@
+@import "../color";
+
+//text color
+
+@each $key, $value in $colors {
+	.text-#{$key} {
+		color: $value;
+	}
+	.text-#{$key}-75 {
+		color: rgba($value, 0.75);
+	}
+	.text-#{$key}-50 {
+		color: rgba($value, 0.5);
+	}
+	.text-#{$key}-25 {
+		color: rgba($value, 0.25);
+	}
+}

@@ -1,21 +1,8 @@
-@import "spacing";
-
-$colors: (
-	"black": rgb(33, 33, 33),
-	"black-75": rgba(33, 33, 33, 0.75),
-	"black-50": rgba(33, 33, 33, 0.5),
-	"black-25": rgba(33, 33, 33, 0.25),
-	"white": rgb(247, 247, 247),
-	"white-75": rgba(247, 247, 247, 0.75),
-	"white-50": rgba(247, 247, 247, 0.5),
-	"white-25": rgba(247, 247, 247, 0.25),
-);
-
-@each $key, $value in $colors {
-	.text-#{$key} {
-		color: $value;
-	}
-	.bg-#{$key} {
-		background-color: $value;
-	}
-}
+@import "spacing/index.scss";
+@import "flexbox/index.scss";
+@import "layout/index.scss";
+@import "sizing/index.scss";
+@import "border/index.scss";
+@import "background/index.scss";
+@import "typography/index.scss";
+@import "color";

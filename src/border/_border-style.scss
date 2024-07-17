@@ -1,0 +1,14 @@
+//border style
+
+$border-styles: (
+	"solid": solid,
+	"dotted": dotted,
+	"dashed": dashed,
+	"double": double,
+);
+
+@each $key, $value in $border-sizes {
+	.border-#{$key} {
+		border-style: $value;
+	}
+}

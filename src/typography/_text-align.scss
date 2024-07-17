@@ -1,0 +1,14 @@
+// text align
+
+$text-align-options: (
+	"center": center,
+	"justify": justify,
+	"left": left,
+	"right": right,
+);
+
+@each $key, $value in $text-align-options {
+	.text-#{$key} {
+		text-align: $value;
+	}
+}

@@ -1,0 +1,14 @@
+//flex direction
+
+$flex-directions: (
+	"col": column,
+	"col-rev": column-reverse,
+	"row": row,
+	"row-rev": row-reverse,
+);
+
+@each $key, $value in $flex-directions {
+	.flex-#{$key} {
+		flex-direction: $value;
+	}
+}

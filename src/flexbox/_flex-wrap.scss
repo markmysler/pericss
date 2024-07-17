@@ -1,0 +1,12 @@
+//flex wrap
+$wrap-options: (
+	"wrap": wrap,
+	"nowrap": nowrap,
+	"wrap-rev": wrap-reverse,
+);
+
+@each $key, $value in $wrap-options {
+	.flex-#{$key} {
+		flex-wrap: $value;
+	}
+}

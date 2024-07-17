@@ -1,0 +1,22 @@
+// font size
+
+$font-size-options: (
+	"1": 0.75rem,
+	"2": 0.875rem,
+	"3": 1rem,
+	"4": 1.125rem,
+	"5": 1.25rem,
+	"6": 1.5rem,
+	"7": 1.75rem,
+	"8": 2rem,
+	"9": 3rem,
+	"10": 4rem,
+	"11": 5rem,
+	"12": 6rem,
+);
+
+@each $key, $value in $font-size-options {
+	.text-#{$key} {
+		font-size: $value;
+	}
+}

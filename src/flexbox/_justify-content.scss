@@ -1,0 +1,22 @@
+//justify content
+
+$justify-content-options: (
+	"base": baseline,
+	"center": center,
+	"start": start,
+	"end": end,
+	"flex-end": flex-end,
+	"flex-start": flex-start,
+	"left": left,
+	"right": right,
+	"around": space-around,
+	"between": space-between,
+	"evenly": space-evenly,
+	"stretch": stretch,
+);
+
+@each $key, $value in $justify-content-options {
+	.justify-#{$key} {
+		justify-content: $value;
+	}
+}

@@ -1,0 +1,22 @@
+//align items
+
+$align-items-options: (
+	"base": baseline,
+	"center": center,
+	"start": start,
+	"end": end,
+	"flex-end": flex-end,
+	"flex-start": flex-start,
+	"safe": safe,
+	"unsafe": unsafe,
+	"stretch": stretch,
+	"normal": normal,
+	"self-end": self-end,
+	"self-start": self-start,
+);
+
+@each $key, $value in $align-items-options {
+	.align-#{$key} {
+		align-items: $value;
+	}
+}

@@ -1,0 +1,46 @@
+Colors:
+    -Agrandar lista ✔
+
+Flexbox:
+    -Flex grow 
+    -Flex shrink 
+    -Order 
+    -Align content 
+    -Align self 
+    -Flex 
+
+Typography:
+    -Font size ✔
+    -Font weight ✔
+    -Font style ✔
+    -Text color ✔
+    -Text align ✔
+    -Text decoration ✔
+    -Text overflow ✔
+    -Text transform ✔
+    -Line height ✔
+    -White space ✔
+    -List style type ✔
+    -Vertical align ✔
+
+Effects:
+    -Elevation
+    -Opacity
+
+Transition:
+    TODO
+
+Animation:
+    TODO
+
+Transforms:
+    TODO
+
+Interactivity:
+    TODO
+
+RESPONSIVE:
+    TODO
+
+THEMES:
+    -Aceptar variables del usuario: primary_color, etc...

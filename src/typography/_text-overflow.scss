@@ -1,0 +1,11 @@
+// text overflow
+
+$text-overflow-options: (
+	"clip": clip,
+	"ellipsis": ellipsis,
+);
+@each $key, $value in $text-overflow-options {
+	.text-overflow-#{$key} {
+		text-overflow: $value;
+	}
+}

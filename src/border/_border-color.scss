@@ -1,0 +1,18 @@
+@import "../color";
+
+//border color
+
+@each $key, $value in $colors {
+	.border-#{$key} {
+		border-color: $value;
+	}
+	.border-#{$key}-75 {
+		border-color: rgba($value, 0.75);
+	}
+	.border-#{$key}-50 {
+		border-color: rgba($value, 0.5);
+	}
+	.border-#{$key}-25 {
+		border-color: rgba($value, 0.25);
+	}
+}

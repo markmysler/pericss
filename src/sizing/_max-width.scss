@@ -1,0 +1,16 @@
+@import "sizes";
+
+//max-width
+
+$additional-sizes: (
+	"min": min-content,
+	"max": max-content,
+);
+
+$max-w-options: map-merge($sizes, $additional-sizes);
+
+@each $key, $value in $max-w-options {
+	.max-w-#{$key} {
+		max-width: $value;
+	}
+}

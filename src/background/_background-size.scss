@@ -1,0 +1,13 @@
+//background size
+
+$bg-sizes: (
+	"auto": auto,
+	"cover": cover,
+	"contain": contain,
+);
+
+@each $key, $value in $bg-sizes {
+	.bg-#{$key} {
+		background-size: $value;
+	}
+}

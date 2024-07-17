@@ -1,0 +1,19 @@
+//background position
+
+$bg-positions: (
+	"top": top,
+	"bottom": bottom,
+	"left": left,
+	"right": right,
+	"center": center,
+	"left-bottom": left bottom,
+	"left-top": left top,
+	"right-bottom": right bottom,
+	"right-top": right top,
+);
+
+@each $key, $value in $bg-positions {
+	.bg-#{$key} {
+		background-position: $value;
+	}
+}
