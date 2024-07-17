@@ -9,5 +9,7 @@ $flex-shrink-options: (
 );
 
 @each $key, $value in $flex-shrink-options {
-	@include responsive("flex-shrink-" + $key, "flex-shrink", $value);
+	@include responsive("flex-shrink-" + $key) {
+		flex-shrink: $value;
+	}
 }

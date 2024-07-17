@@ -11,5 +11,7 @@ $text-decoration-options: (
 );
 
 @each $key, $value in $text-decoration-options {
-	@include responsive($key, "text-decoration", $value);
+	@include responsive($key) {
+		text-decoration: $value;
+	}
 }

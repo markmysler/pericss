@@ -9,5 +9,7 @@ $list-style-options: (
 );
 
 @each $key, $value in $list-style-options {
-	@include responsive("list-" + $key, "list-style", $value);
+	@include responsive("list-" + $key) {
+		list-style: $value;
+	}
 }

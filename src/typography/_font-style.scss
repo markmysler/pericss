@@ -1,2 +1,4 @@
 @import "../responsive";
-@include responsive("font-italic", "font-style", italic);
+@include responsive("font-italic") {
+	font-style: italic;
+}

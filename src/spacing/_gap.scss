@@ -4,7 +4,13 @@
 // gap
 
 @each $key, $value in $spacing {
-	@include responsive("gap-" + $key, "gap", $value);
-	@include responsive("gap-row-" + $key, "gap", $value 0);
-	@include responsive("gap-col-" + $key, "gap", 0 $value);
+	@include responsive("gap-" + $key) {
+		gap: $value;
+	}
+	@include responsive("gap-row-" + $key) {
+		gap: $value 0;
+	}
+	@include responsive("gap-col-" + $key) {
+		gap: 0 $value;
+	}
 }

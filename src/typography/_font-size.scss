@@ -22,5 +22,7 @@ $font-size-options: (
 );
 
 @each $key, $value in $font-size-options {
-	@include responsive("text-" + $key, "font-size", $value);
+	@include responsive("text-" + $key) {
+		font-size: $value;
+	}
 }

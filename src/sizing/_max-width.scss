@@ -11,5 +11,7 @@ $additional-sizes: (
 $max-w-options: map-merge($width-options, $additional-sizes);
 
 @each $key, $value in $max-w-options {
-	@include responsive("max-w-" + $key, "max-width", $value);
+	@include responsive("max-w-" + $key) {
+		max-width: $value;
+	}
 }

@@ -8,5 +8,7 @@ $wrap-options: (
 );
 
 @each $key, $value in $wrap-options {
-	@include responsive("flex-" + $key, "flex-wrap", $value);
+	@include responsive("flex-" + $key) {
+		flex-wrap: $value;
+	}
 }

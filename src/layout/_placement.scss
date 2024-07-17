@@ -10,8 +10,16 @@ $placement-options: (
 );
 
 @each $key, $value in $placement-options {
-	@include responsive("top-" + $key, "top", $value);
-	@include responsive("bottom-" + $key, "bottom", $value);
-	@include responsive("right-" + $key, "right", $value);
-	@include responsive("left-" + $key, "left", $value);
+	@include responsive("top-" + $key) {
+		top: $value;
+	}
+	@include responsive("bottom-" + $key) {
+		bottom: $value;
+	}
+	@include responsive("right-" + $key) {
+		right: $value;
+	}
+	@include responsive("left-" + $key) {
+		left: $value;
+	}
 }

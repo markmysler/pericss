@@ -12,5 +12,7 @@ $min-h-additional: (
 $min-h-options: map-merge($pixel-height-options, $min-h-additional);
 
 @each $key, $value in $min-h-options {
-	@include responsive("min-h-" + $key, "min-height", $value);
+	@include responsive("min-h-" + $key) {
+		min-height: $value;
+	}
 }

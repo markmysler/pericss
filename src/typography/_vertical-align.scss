@@ -14,5 +14,7 @@ $vertical-align-options: (
 );
 
 @each$key,$value in $vertical-align-options {
-	@include responsive("vertical-align-" + $key, "vertical-align", $value);
+	@include responsive("vertical-align-" + $key) {
+		vertical-align: $value;
+	}
 }

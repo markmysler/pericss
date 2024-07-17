@@ -15,20 +15,22 @@ $border-radius-options: (
 );
 
 @each $key, $value in $border-radius-options {
-	@include responsive("border-" + $key, "border-radius", $value);
-	@include responsive-complex("border-top-" + $key) {
+	@include responsive("border-" + $key) {
+		border-radius: $value;
+	}
+	@include responsive("border-top-" + $key) {
 		border-top-left-radius: $value;
 		border-top-right-radius: $value;
 	}
-	@include responsive-complex("border-bottom-" + $key) {
+	@include responsive("border-bottom-" + $key) {
 		border-bottom-left-radius: $value;
 		border-bottom-right-radius: $value;
 	}
-	@include responsive-complex("border-right-" + $key) {
+	@include responsive("border-right-" + $key) {
 		border-top-right-radius: $value;
 		border-bottom-right-radius: $value;
 	}
-	@include responsive-complex("border-left-" + $key) {
+	@include responsive("border-left-" + $key) {
 		border-top-left-radius: $value;
 		border-bottom-left-radius: $value;
 	}

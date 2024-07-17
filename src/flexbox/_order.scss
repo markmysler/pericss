@@ -13,5 +13,7 @@ $order-options: (
 );
 
 @each $key, $value in $order-options {
-	@include responsive("flex-order-" + $key, "order", $value);
+	@include responsive("flex-order-" + $key) {
+		order: $value;
+	}
 }

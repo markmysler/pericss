@@ -10,5 +10,7 @@ $flex-directions: (
 );
 
 @each $key, $value in $flex-directions {
-	@include responsive("flex-" + $key, "flex-direction", $value);
+	@include responsive("flex-" + $key) {
+		flex-direction: $value;
+	}
 }

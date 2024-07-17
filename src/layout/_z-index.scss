@@ -13,5 +13,7 @@ $z-index-options: (
 );
 
 @each $key, $value in $z-index-options {
-	@include responsive("z-" + $key, "z-index", $value);
+	@include responsive("z-" + $key) {
+		z-index: $value;
+	}
 }

@@ -11,5 +11,7 @@ $position-options: (
 );
 
 @each $key, $value in $position-options {
-	@include responsive($key, "position", $value);
+	@include responsive($key) {
+		position: $value;
+	}
 }

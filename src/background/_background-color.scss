@@ -4,20 +4,16 @@
 //background color
 
 @each $key, $value in $colors {
-	@include responsive("bg-" + $key, "background-color", $value);
-	@include responsive(
-		"bg-" + $key + "-75",
-		"background-color",
-		rgba($value, 0.75)
-	);
-	@include responsive(
-		"bg-" + $key + "-50",
-		"background-color",
-		rgba($value, 0.5)
-	);
-	@include responsive(
-		"bg-" + $key + "-25",
-		"background-color",
-		rgba($value, 0.25)
-	);
+	@include responsive("bg-" + $key) {
+		background-color: $value;
+	}
+	@include responsive("bg-" + $key + "-75") {
+		background-color: rgba($value, 0.75);
+	}
+	@include responsive("bg-" + $key + "-50") {
+		background-color: rgba($value, 0.5);
+	}
+	@include responsive("bg-" + $key + "-25") {
+		background-color: rgba($value, 0.25);
+	}
 }

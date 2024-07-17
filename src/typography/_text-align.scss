@@ -10,5 +10,7 @@ $text-align-options: (
 );
 
 @each $key, $value in $text-align-options {
-	@include responsive("text-" + $key, "text-align", $value);
+	@include responsive("text-" + $key) {
+		text-align: $value;
+	}
 }

@@ -5,5 +5,7 @@
 @import "align-items";
 
 @each $key, $value in $align-items-options {
-	@include responsive("align-content-" + $key, "align-content", $value);
+	@include responsive("align-content-" + $key) {
+		align-content: $value;
+	}
 }

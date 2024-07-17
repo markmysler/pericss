@@ -17,5 +17,7 @@ $opacity-options: (
 );
 
 @each $key, $value in $opacity-options {
-	@include responsive("opacity-" + $key, "opacity", $value);
+	@include responsive("opacity-" + $key) {
+		opacity: $value;
+	}
 }

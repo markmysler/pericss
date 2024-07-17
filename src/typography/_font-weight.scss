@@ -17,5 +17,7 @@ $font-weight-options: (
 );
 
 @each $key, $value in $font-weight-options {
-	@include responsive("font-" + $key, "font-weight", $value);
+	@include responsive("font-" + $key) {
+		font-weight: $value;
+	}
 }

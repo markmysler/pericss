@@ -10,5 +10,7 @@ $border-styles: (
 );
 
 @each $key, $value in $border-sizes {
-	@include responsive("border-" + $key, "border-style", $value);
+	@include responsive("border-" + $key) {
+		border-style: $value;
+	}
 }

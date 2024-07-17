@@ -10,7 +10,13 @@ $overflow-options: (
 );
 
 @each $key, $value in $overflow-options {
-	@include responsive("overflow-" + $key, "overflow", $value);
-	@include responsive("overflow-x-" + $key, "overflow-x", $value);
-	@include responsive("overflow-y-" + $key, "overflow-y", $value);
+	@include responsive("overflow-" + $key) {
+		overflow: $value;
+	}
+	@include responsive("overflow-x-" + $key) {
+		overflow-x: $value;
+	}
+	@include responsive("overflow-y-" + $key) {
+		overflow-y: $value;
+	}
 }

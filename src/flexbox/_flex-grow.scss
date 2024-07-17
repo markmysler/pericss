@@ -9,5 +9,7 @@ $flex-grow-options: (
 );
 
 @each $key, $value in $flex-grow-options {
-	@include responsive("flex-grow-" + $key, "flex-grow", $value);
+	@include responsive("flex-grow-" + $key) {
+		flex-grow: $value;
+	}
 }

@@ -11,5 +11,7 @@ $display-options: (
 );
 
 @each $key, $value in $display-options {
-	@include responsive($key, "display", $value);
+	@include responsive($key) {
+		display: $value;
+	}
 }

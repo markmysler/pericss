@@ -1,9 +1,10 @@
 @import "../responsive";
+@import "align-items";
 
 // align self
 
-@import "align-items";
-
 @each $key, $value in $align-items-options {
-	@include responsive("align-self-" + $key, "align-self", $value);
+	@include responsive("align-self-" + $key) {
+		align-self: $value;
+	}
 }

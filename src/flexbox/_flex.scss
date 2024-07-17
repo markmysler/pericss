@@ -10,5 +10,7 @@ $flex-options: (
 );
 
 @each $key, $value in $flex-options {
-	@include responsive("flex-" + $key, "flex", $value);
+	@include responsive("flex-" + $key) {
+		flex: $value;
+	}
 }

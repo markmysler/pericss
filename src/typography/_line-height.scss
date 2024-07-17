@@ -11,5 +11,7 @@ $line-height-options: (
 );
 
 @each $key, $value in $line-height-options {
-	@include responsive("line-height-" + $key, "line-height", $value);
+	@include responsive("line-height-" + $key) {
+		line-height: $value;
+	}
 }

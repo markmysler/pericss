@@ -18,5 +18,7 @@ $align-items-options: (
 );
 
 @each $key, $value in $align-items-options {
-	@include responsive("align-" + $key, "align-items", $value);
+	@include responsive("align-" + $key) {
+		align-items: $value;
+	}
 }

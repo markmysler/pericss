@@ -14,5 +14,7 @@ $min-w-additional: (
 $min-w-options: map-merge($pixel-width-options, $min-w-additional);
 
 @each $key, $value in $min-w-options {
-	@include responsive("min-w-" + $key, "min-width", $value);
+	@include responsive("min-w-" + $key) {
+		min-width: $value;
+	}
 }

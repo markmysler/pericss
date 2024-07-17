@@ -6,5 +6,7 @@
 $max-h-options: map-remove($height-options, "auto");
 
 @each $key, $value in $max-h-options {
-	@include responsive("max-h-" + $key, "max-height", $value);
+	@include responsive("max-h-" + $key) {
+		max-height: $value;
+	}
 }

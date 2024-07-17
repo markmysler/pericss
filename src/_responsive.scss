@@ -4,23 +4,11 @@ $breakpoints: (
 	"sm": 480px,
 	"md": 768px,
 	"lg": 1080px,
-	"xl": 1920px,
+	"xl": 1440px,
+	"xxl": 1920px,
 );
 
-@mixin responsive($class, $property, $value) {
-	.#{$class} {
-		#{$property}: #{$value};
-	}
-
-	@each $breakpoint, $width in $breakpoints {
-		@media (min-width: $width) {
-			.#{$breakpoint}\:#{$class} {
-				#{$property}: #{$value};
-			}
-		}
-	}
-}
-@mixin responsive-complex($class) {
+@mixin responsive($class) {
 	.#{$class} {
 		@content;
 	}
