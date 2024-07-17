@@ -1,3 +1,5 @@
+@import "../responsive";
+
 // white space
 
 $white-space-options: (
@@ -6,7 +8,5 @@ $white-space-options: (
 );
 
 @each $key, $value in $white-space-options {
-	.white-space-#{$key} {
-		white-space: $value;
-	}
+	@include responsive("white-space-" + $key, "white-space", $value);
 }

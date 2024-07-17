@@ -1,3 +1,5 @@
+@import "../responsive";
+
 // text align
 
 $text-align-options: (
@@ -8,7 +10,5 @@ $text-align-options: (
 );
 
 @each $key, $value in $text-align-options {
-	.text-#{$key} {
-		text-align: $value;
-	}
+	@include responsive("text-" + $key, "text-align", $value);
 }

@@ -1,0 +1,13 @@
+@import "../responsive";
+
+// flex grow
+
+$flex-grow-options: (
+	"1": 1,
+	"2": 2,
+	"3": 3,
+);
+
+@each $key, $value in $flex-grow-options {
+	@include responsive("flex-grow-" + $key, "flex-grow", $value);
+}

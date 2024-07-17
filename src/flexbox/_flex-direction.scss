@@ -1,3 +1,5 @@
+@import "../responsive";
+
 //flex direction
 
 $flex-directions: (
@@ -8,7 +10,5 @@ $flex-directions: (
 );
 
 @each $key, $value in $flex-directions {
-	.flex-#{$key} {
-		flex-direction: $value;
-	}
+	@include responsive("flex-" + $key, "flex-direction", $value);
 }

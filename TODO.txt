@@ -2,12 +2,12 @@ Colors:
     -Agrandar lista ✔
 
 Flexbox:
-    -Flex grow 
-    -Flex shrink 
-    -Order 
-    -Align content 
-    -Align self 
-    -Flex 
+    -Flex grow ✔
+    -Flex shrink ✔
+    -Flex ✔
+    -Order ✔
+    -Align content ✔
+    -Align self ✔
 
 Typography:
     -Font size ✔
@@ -24,8 +24,8 @@ Typography:
     -Vertical align ✔
 
 Effects:
-    -Elevation
-    -Opacity
+    -Elevation ✔
+    -Opacity ✔
 
 Transition:
     TODO
@@ -40,7 +40,10 @@ Interactivity:
     TODO
 
 RESPONSIVE:
-    TODO
+    TODO ✔
 
 THEMES:
     -Aceptar variables del usuario: primary_color, etc...
+
+Documentacion:
+    TODO

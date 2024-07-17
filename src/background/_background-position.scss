@@ -1,3 +1,5 @@
+@import "../responsive";
+
 //background position
 
 $bg-positions: (
@@ -13,7 +15,5 @@ $bg-positions: (
 );
 
 @each $key, $value in $bg-positions {
-	.bg-#{$key} {
-		background-position: $value;
-	}
+	@include responsive("bg-" + $key, "background-position", $value);
 }

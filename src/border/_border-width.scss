@@ -1,3 +1,5 @@
+@import "../responsive";
+
 //border width
 
 $border-sizes: (
@@ -9,27 +11,17 @@ $border-sizes: (
 );
 
 @each $key, $value in $border-sizes {
-	.border-#{$key} {
-		border-width: $value;
-	}
-	.border-x-#{$key} {
+	@include responsive("border-" + $key, "border-width", $value);
+	@include responsive("border-top-" + $key, "border-top-width", $value);
+	@include responsive("border-bottom-" + $key, "border-bottom-width", $value);
+	@include responsive("border-right-" + $key, "border-right-width", $value);
+	@include responsive("border-left-" + $key, "border-left-width", $value);
+	@include responsive-complex("border-x-" + $key) {
 		border-right-width: $value;
 		border-left-width: $value;
 	}
-	.border-y-#{$key} {
+	@include responsive-complex("border-y-" + $key) {
 		border-top-width: $value;
 		border-bottom-width: $value;
-	}
-	.border-top-#{$key} {
-		border-top-width: $value;
-	}
-	.border-bottom-#{$key} {
-		border-bottom-width: $value;
-	}
-	.border-left-#{$key} {
-		border-left-width: $value;
-	}
-	.border-right-#{$key} {
-		border-right-width: $value;
 	}
 }

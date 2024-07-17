@@ -1,3 +1,5 @@
+@import "../responsive";
+
 //align items
 
 $align-items-options: (
@@ -16,7 +18,5 @@ $align-items-options: (
 );
 
 @each $key, $value in $align-items-options {
-	.align-#{$key} {
-		align-items: $value;
-	}
+	@include responsive("align-" + $key, "align-items", $value);
 }

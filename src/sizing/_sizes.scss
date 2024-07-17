@@ -1,7 +1,9 @@
 $sizes: (
 	"0": 0,
-	"half": 50%,
-	"full": 100%,
+	"25": 25%,
+	"50": 50%,
+	"75": 75%,
+	"100": 100%,
 	"auto": auto,
 	"1rem": 1rem,
 	"2rem": 2rem,
@@ -34,3 +36,29 @@ $sizes: (
 	"29rem": 29rem,
 	"30rem": 30rem,
 );
+
+$pixel-width-options: (
+	"3840": 3840px,
+	"2560": 2560px,
+	"1920": 1920px,
+	"1680": 1680px,
+	"1600": 1600px,
+	"1440": 1440px,
+	"1366": 1366px,
+	"1280": 1280px,
+	"1024": 1024px,
+);
+
+$pixel-height-options: (
+	"2160": 2160px,
+	"1440": 1440px,
+	"1080": 1080px,
+	"1050": 1050px,
+	"1024": 1024px,
+	"900": 900px,
+	"800": 800px,
+	"768": 768px,
+);
+
+$height-options: map-merge($sizes, $pixel-height-options);
+$width-options: map-merge($sizes, $pixel-width-options);

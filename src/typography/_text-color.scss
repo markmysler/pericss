@@ -1,18 +1,11 @@
 @import "../color";
+@import "../responsive";
 
 //text color
 
 @each $key, $value in $colors {
-	.text-#{$key} {
-		color: $value;
-	}
-	.text-#{$key}-75 {
-		color: rgba($value, 0.75);
-	}
-	.text-#{$key}-50 {
-		color: rgba($value, 0.5);
-	}
-	.text-#{$key}-25 {
-		color: rgba($value, 0.25);
-	}
+	@include responsive("text-" + $key, "color", $value);
+	@include responsive("text-" + $key + "-75", "color", rgba($value, 0.75));
+	@include responsive("text-" + $key + "-50", "color", rgba($value, 0.5));
+	@include responsive("text-" + $key + "-25", "color", rgba($value, 0.25));
 }

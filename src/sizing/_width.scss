@@ -1,0 +1,9 @@
+@import "sizes";
+@import "../responsive";
+
+// width
+
+@each $key, $value in $width-options {
+	@include responsive("w-" + $key, "width", $value);
+}
+@include responsive("w-screen", "width", 100vw);

@@ -1,3 +1,5 @@
+@import "../responsive";
+
 $display-options: (
 	"flex": flex,
 	"grid": grid,
@@ -9,7 +11,5 @@ $display-options: (
 );
 
 @each $key, $value in $display-options {
-	.#{$key} {
-		display: $value;
-	}
+	@include responsive($key, "display", $value);
 }

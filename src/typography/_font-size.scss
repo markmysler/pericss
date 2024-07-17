@@ -1,3 +1,5 @@
+@import "../responsive";
+
 // font size
 
 $font-size-options: (
@@ -9,14 +11,16 @@ $font-size-options: (
 	"6": 1.5rem,
 	"7": 1.75rem,
 	"8": 2rem,
-	"9": 3rem,
-	"10": 4rem,
-	"11": 5rem,
-	"12": 6rem,
+	"9": 2.5rem,
+	"10": 3rem,
+	"11": 3.5rem,
+	"12": 4rem,
+	"13": 4.5rem,
+	"14": 5rem,
+	"15": 6rem,
+	"16": 7rem,
 );
 
 @each $key, $value in $font-size-options {
-	.text-#{$key} {
-		font-size: $value;
-	}
+	@include responsive("text-" + $key, "font-size", $value);
 }

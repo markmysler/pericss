@@ -1,3 +1,5 @@
+@import "../responsive";
+
 // text transform
 
 $text-transform-options: (
@@ -7,7 +9,5 @@ $text-transform-options: (
 );
 
 @each$key,$value in $text-transform-options {
-	.#{$key} {
-		text-transform: $value;
-	}
+	@include responsive($key, "text-transform", $value);
 }

@@ -1,11 +1,10 @@
 @import "sizes";
+@import "../responsive";
 
 //max-height
 
-$max-h-options: map-remove($sizes, "auto");
+$max-h-options: map-remove($height-options, "auto");
 
 @each $key, $value in $max-h-options {
-	.max-h-#{$key} {
-		max-height: $value;
-	}
+	@include responsive("max-h-" + $key, "max-height", $value);
 }

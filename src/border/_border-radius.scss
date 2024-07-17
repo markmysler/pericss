@@ -1,3 +1,5 @@
+@import "../responsive";
+
 //border radius
 
 $border-radius-options: (
@@ -13,22 +15,20 @@ $border-radius-options: (
 );
 
 @each $key, $value in $border-radius-options {
-	.border-#{$key} {
-		border-radius: $value;
-	}
-	.border-top-#{$key} {
+	@include responsive("border-" + $key, "border-radius", $value);
+	@include responsive-complex("border-top-" + $key) {
 		border-top-left-radius: $value;
 		border-top-right-radius: $value;
 	}
-	.border-bottom-#{$key} {
+	@include responsive-complex("border-bottom-" + $key) {
 		border-bottom-left-radius: $value;
 		border-bottom-right-radius: $value;
 	}
-	.border-right-#{$key} {
+	@include responsive-complex("border-right-" + $key) {
 		border-top-right-radius: $value;
 		border-bottom-right-radius: $value;
 	}
-	.border-left-#{$key} {
+	@include responsive-complex("border-left-" + $key) {
 		border-top-left-radius: $value;
 		border-bottom-left-radius: $value;
 	}

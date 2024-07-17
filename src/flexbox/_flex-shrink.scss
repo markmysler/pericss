@@ -1,0 +1,13 @@
+@import "../responsive";
+
+// flex shrink
+
+$flex-shrink-options: (
+	"1": 1,
+	"2": 2,
+	"3": 3,
+);
+
+@each $key, $value in $flex-shrink-options {
+	@include responsive("flex-shrink-" + $key, "flex-shrink", $value);
+}

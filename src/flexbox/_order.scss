@@ -1,0 +1,17 @@
+@import "../responsive";
+
+// order
+
+$order-options: (
+	"0": 0,
+	"1": 1,
+	"2": 2,
+	"3": 3,
+	"4": 4,
+	"5": 5,
+	"6": 6,
+);
+
+@each $key, $value in $order-options {
+	@include responsive("flex-order-" + $key, "order", $value);
+}

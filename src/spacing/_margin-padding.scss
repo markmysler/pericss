@@ -1,29 +1,28 @@
 @import "spacing-options";
+@import "../responsive";
 
 //margin & padding
 
 @mixin generate-spacing-classes($prefix, $property) {
 	@each $key, $value in $spacing {
-		.#{$prefix}-#{$key} {
-			#{$property}: $value;
-		}
-		.#{$prefix}t-#{$key} {
-			#{$property}-top: $value;
-		}
-		.#{$prefix}b-#{$key} {
-			#{$property}-bottom: $value;
-		}
-		.#{$prefix}l-#{$key} {
-			#{$property}-left: $value;
-		}
-		.#{$prefix}r-#{$key} {
-			#{$property}-right: $value;
-		}
-		.#{$prefix}x-#{$key} {
+		@include responsive($prefix + "-" + $key, $property, $value);
+		@include responsive($prefix + "t-" + $key, $property + "-top", $value);
+		@include responsive(
+			$prefix + "b-" + $key,
+			$property + "-bottom",
+			$value
+		);
+		@include responsive($prefix + "l-" + $key, $property + "-left", $value);
+		@include responsive(
+			$prefix + "r-" + $key,
+			$property + "-right",
+			$value
+		);
+		@include responsive-complex($prefix + "x-" + $key) {
 			#{$property}-left: $value;
 			#{$property}-right: $value;
 		}
-		.#{$prefix}y-#{$key} {
+		@include responsive-complex($prefix + "y-" + $key) {
 			#{$property}-top: $value;
 			#{$property}-bottom: $value;
 		}

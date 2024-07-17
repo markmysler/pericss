@@ -1,3 +1,5 @@
+@import "../responsive";
+
 //background repeat
 
 $bg-repeat-options: (
@@ -10,7 +12,5 @@ $bg-repeat-options: (
 );
 
 @each $key, $value in $bg-repeat-options {
-	.bg-#{$key} {
-		background-repeat: $value;
-	}
+	@include responsive("bg-" + $key, "background-repeat", $value);
 }

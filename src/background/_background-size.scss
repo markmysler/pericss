@@ -1,3 +1,5 @@
+@import "../responsive";
+
 //background size
 
 $bg-sizes: (
@@ -7,7 +9,5 @@ $bg-sizes: (
 );
 
 @each $key, $value in $bg-sizes {
-	.bg-#{$key} {
-		background-size: $value;
-	}
+	@include responsive("bg-" + $key, "background-size", $value);
 }

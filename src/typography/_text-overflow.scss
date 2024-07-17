@@ -1,3 +1,5 @@
+@import "../responsive";
+
 // text overflow
 
 $text-overflow-options: (
@@ -5,7 +7,5 @@ $text-overflow-options: (
 	"ellipsis": ellipsis,
 );
 @each $key, $value in $text-overflow-options {
-	.text-overflow-#{$key} {
-		text-overflow: $value;
-	}
+	@include responsive("text-overflow-" + $key, "text-overflow", $value);
 }
