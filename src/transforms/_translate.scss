@@ -1,0 +1,20 @@
+@import "../responsive";
+
+// translate
+
+$translate-options: (
+	"x": translateX,
+	"y": translateY,
+);
+
+@each $key, $value in $translate-options {
+	@include responsive("translate-" + $key + "-0") {
+		transform: #{$value }(0%);
+	}
+	@include responsive("translate-" + $key + "-100") {
+		transform: #{$value }(100%);
+	}
+	@include responsive("-translate-" + $key + "-100") {
+		transform: #{$value }(-100%);
+	}
+}

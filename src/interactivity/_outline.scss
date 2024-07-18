@@ -1,0 +1,7 @@
+@import "../responsive";
+
+// outline
+
+@include responsive("outline-none") {
+	outline: none;
+}

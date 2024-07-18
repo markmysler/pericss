@@ -1,0 +1,19 @@
+@import "../responsive";
+
+// transition timing function
+
+$transition-timing-function-options: (
+	"linear": linear,
+	"ease-in": ease-in,
+	"ease-out": ease-out,
+	"ease-in-out": ease-in-out,
+	"ease": ease,
+	"step-end": step-end,
+	"step-start": step-start,
+);
+
+@each $key, $value in $transition-timing-function-options {
+	@include responsive("transition-" + $key) {
+		transition-timing-function: $value;
+	}
+}

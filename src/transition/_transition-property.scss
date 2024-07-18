@@ -1,0 +1,34 @@
+@import "../responsive";
+
+// transition property
+
+$transition-property-options: (
+	"none": none,
+	"all": all,
+	"transform": transform,
+	"colors": (
+		background-color,
+		border-color,
+		color,
+	),
+);
+
+$special-cases: ("none", "all", "transform");
+
+@each $key, $value in $transition-property-options {
+	@if index($special-cases, $key) {
+		@include responsive("transition-" + $key) {
+			transition-property: $value;
+		}
+	} @else {
+		$property-values: "";
+		@each $property in $value {
+			$property-values: $property-values + $property + ", ";
+		}
+		$property-values: unquote(str-slice($property-values, 1, -2));
+
+		@include responsive("transition-" + $key) {
+			transition-property: $property-values;
+		}
+	}
+}

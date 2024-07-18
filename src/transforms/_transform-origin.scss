@@ -1,0 +1,21 @@
+@import "../responsive";
+
+// transform origin
+
+$transform-origin-options: (
+	"center": center,
+	"top": top,
+	"bottom": bottom,
+	"right": right,
+	"left": left,
+	"top-right": top right,
+	"top-left": top left,
+	"bottom-right": bottom right,
+	"bottom-left": bottom left,
+);
+
+@each $key, $value in $transform-origin-options {
+	@include responsive("origin-" + $key) {
+		transform-origin: $value;
+	}
+}

@@ -1,0 +1,17 @@
+@import "../responsive";
+
+// rotate
+
+$rotate-options: (
+	"90": 90deg,
+	"180": 180deg,
+);
+
+@each $key, $value in $rotate-options {
+	@include responsive("rotate-" + $key) {
+		transform: rotate($value);
+	}
+	@include responsive("-rotate-" + $key) {
+		transform: rotate(-$value);
+	}
+}

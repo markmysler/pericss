@@ -1,0 +1,16 @@
+@import "../responsive";
+
+// cursor
+
+$cursor-options: (
+	"auto": auto,
+	"pointer": pointer,
+	"wait": wait,
+	"move": move,
+);
+
+@each $key, $value in $cursor-options {
+	@include responsive("cursor-" + $key) {
+		cursor: $value;
+	}
+}

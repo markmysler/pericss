@@ -1,0 +1,16 @@
+@import "../responsive";
+
+// user select
+
+$user-select-options: (
+	"auto": auto,
+	"none": none,
+	"text": text,
+	"all": all,
+);
+
+@each $key, $value in $user-select-options {
+	@include responsive("select-" + $key) {
+		user-select: $value;
+	}
+}

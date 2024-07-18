@@ -1,0 +1,20 @@
+@import "../responsive";
+
+// transition duration
+
+$transition-duration-options: (
+	"100": 100ms,
+	"150": 150ms,
+	"200": 200ms,
+	"300": 300ms,
+	"400": 400ms,
+	"500": 500ms,
+	"1000": 1000ms,
+	"2000": 2000ms,
+	"3000": 3000ms,
+);
+@each $key, $value in $transition-duration-options {
+	@include responsive("transition-duration-" + $key) {
+		transition-duration: $value;
+	}
+}

@@ -1,0 +1,14 @@
+@import "../responsive";
+
+// pointer events
+
+$pointer-events-options: (
+	"auto": auto,
+	"none": none,
+);
+
+@each $key, $value in $pointer-events-options {
+	@include responsive("pointer-events-" + $key) {
+		pointer-events: $value;
+	}
+}

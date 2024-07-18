@@ -28,22 +28,27 @@ Effects:
     -Opacity ✔
 
 Transition:
-    TODO
+    TODO ✔
 
 Animation:
     TODO
 
 Transforms:
-    TODO
+    TODO ✔
 
 Interactivity:
-    TODO
+    TODO ✔
 
 RESPONSIVE:
     TODO ✔
 
 THEMES:
-    -Aceptar variables del usuario: primary_color, etc...
+    -Aceptar variables del usuario: primary_color, secondary_color, primary_font, secondary_font, etc...
 
 Documentacion:
     TODO
+
+PSEUDOCLASSES:
+    -Hover
+    -Focus
+    -Active

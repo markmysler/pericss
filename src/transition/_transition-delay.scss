@@ -1,0 +1,19 @@
+@import "../responsive";
+
+// transition delay
+
+$transition-delay-options: (
+	"100": 100ms,
+	"150": 150ms,
+	"200": 200ms,
+	"300": 300ms,
+	"400": 400ms,
+	"500": 500ms,
+	"1000": 1000ms,
+	"2000": 2000ms,
+);
+@each $key, $value in $transition-delay-options {
+	@include responsive("transition-delay-" + $key) {
+		transition-delay: $value;
+	}
+}
